@@ -246,6 +246,63 @@ class LinkedListQueue{
         }
         return true;
     }
+
+    //return true/false
+    //get sum of first half and sum of second half and see if they are equal
+    //if there's an uneven list, add middle number to both sides
+    //only use built-in methods
+    SumOfHalves() {
+        if(this.isEmpty()) {
+            console.log("IsEmptyFalse");
+            return false;
+        }
+        else{
+            // Set counting variables
+            var sumL = 0;
+            var sumR = 0;
+            var len = this.size();
+            for (var i = 1; i <= this.length; i++) {
+                var temp = this.dequeue();
+                if (len % 2 == 1 && i == Math.ceil(len/2)) {
+                    sumL += temp;
+                    sumR += temp;
+                } else if(i<=len/2){
+                    sumL += temp;
+                } else {
+                    sumR += temp;
+                }
+                this.enqueue(temp);
+            }
+            return sumL === sumR;
+        }
+    }
+
+// Two Stack Queue
+}
+
+class TwoStackQueue {
+    constructor() {
+        this.stack1 = new StackArr();
+        this.stack2 = new StackArr();
+    }
+
+    enqueue(item) {
+        this.stack1.push(item);
+        console.log(this.stack1);
+    }
+
+    dequeue() {
+        while(this.stack1.items.length > 1){
+            this.stack2.push(this.stack1.pop())
+            console.log(this.stack2.items);
+        }
+        var temp = this.stack1.pop();
+        while(this.stack2.items.length > 0){
+            this.stack1.push(this.stack2.pop())
+            console.log(this.stack2.items);
+        }
+        return temp;
+    }
 }
 
 // var arrQueue = new ArrayQueue;
