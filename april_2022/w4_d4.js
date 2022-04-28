@@ -277,9 +277,9 @@ class LinkedListQueue{
         }
     }
 
-// Two Stack Queue
 }
 
+// Two Stack Queue
 class TwoStackQueue {
     constructor() {
         this.stack1 = new StackArr();
