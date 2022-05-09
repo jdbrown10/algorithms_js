@@ -11,8 +11,8 @@ const intersect = (arrLeft, arrRight) => {
     //iterate through the left array
     rightIndex = 0
     for (let i = 0; i < arrLeft.length; i++) {
-        //for each value in the left array, look through the whole right array
-        for (let j = rightIndex; j < arrRight.length; j++) {
+        //for each value in the left array, look through the whole right array, or until arrLeft[i] gets set to null
+        for (let j = rightIndex; j < arrRight.length && arrLeft[i]; j++) {
             //if we reach a value that is equal in both arrays...
             if (arrLeft[i] == arrRight[j]) {
                 //push that value into the new array
