@@ -32,7 +32,7 @@ const intersect = (arrLeft, arrRight) => {
     return newArray;
 }
 
-arr1 = [2, 4, 5, 7, 122, 199, 200];
-arr2 = [2, 2, 4, 5, 7, 8, 9, 10, 122, 199, 200];
+arr1 = [2, 2, 4, 4, 5, 7, 122, 199, 200];
+arr2 = [2, 2, 4, 4, 5, 7, 8, 9, 10, 122, 199, 200];
 
 console.log(intersect(arr1, arr2));
