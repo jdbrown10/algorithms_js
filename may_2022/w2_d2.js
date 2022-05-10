@@ -19,6 +19,10 @@ const union = (arrLeft, arrRight) => {
         }
     }
     //at this point, everything from the left array has been pushed into the new Array, and any duplicates from the left to the right have been set to null
+    console.log("===========================")
+    console.log("new array before adding stuff from right array: " + newArray)
+    console.log("right array before adding stuff from right array: " + arrRight)
+    console.log("===========================")
 
     //now we go through the right array and splice the remaining values into the new array
     for (let i = 0; i < arrRight.length; i++) {
@@ -27,10 +31,12 @@ const union = (arrLeft, arrRight) => {
             var spliced = false;
             for (let j = 0; j < newArray.length && spliced == false; j++) {
                 if (newArray[j] >= arrRight[i]) {
+                    console.log("adding " + arrRight[i] + " to new array");
                     newArray.splice(j, 0, arrRight[i]);
                     var spliced = true;
                 }
                 if (j == newArray.length - 1 && arrRight[i] > newArray[j]) {
+                    console.log("adding " + arrRight[i] + " to new array");
                     newArray.push(arrRight[i]);
                     var spliced = true;
                 }
@@ -48,5 +54,5 @@ const union = (arrLeft, arrRight) => {
 // console.log(union(arr1, arr2));
 
 console.log(union([2,4,7,9,10],[2,3,5,7,9,10]));
-console.log(union([1,2,2,2,7],[2,2,6,6,7]));
-console.log(union([1,5,9],[2,6,10]));
+// console.log(union([1,2,2,2,7],[2,2,6,6,7]));
+// console.log(union([1,5,9],[2,6,10]));
