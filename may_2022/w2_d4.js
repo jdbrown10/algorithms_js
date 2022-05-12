@@ -1,6 +1,8 @@
 // You are given a list of integers. Find all the consecutive sets of
 // integers that adds up to the sum passed in as one of the imputs.
 
+
+//edge case-- this doens't work with negative numbers all the time, because the consition on 16 might break that for loop too early if a negative number would bring a larger number back down to the targetSum
 const findConsecutiveSums = (nums, targetSum) => {
     //create an empty array to return -> any arrays generated that meet the criteria will get pushed into this array
     var sumArrays = []
