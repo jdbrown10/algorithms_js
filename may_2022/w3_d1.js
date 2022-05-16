@@ -54,5 +54,5 @@ const isRotation = (str1, str2) => {
 let shoes = "Did I shine my shoes today?";
 console.log(rotateString(shoes, 9));
 
-// console.log(isRotation("Did I shine my shoes today?", "es today?Did I shine my sho"));
-// console.log(isRotation("Did I shine my shoes today? ", "es today?Did I shine my sho"));
+// console.log(isRotation("Did I shine my shoes today?", "es today?Did I shine my sho")); //true
+// console.log(isRotation("Did I shine my shoes today? ", "es today?Did I shine my sho")); //false
