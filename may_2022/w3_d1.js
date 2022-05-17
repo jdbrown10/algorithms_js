@@ -8,18 +8,18 @@ and rotates the characters in the string to the right by that amount
 
 const rotateString = (str, num) => {
     //rotate num times, as long as num is greater than 0
-    //grab the start index -> the place where we'll make a split to move the characters around
-    var startIndex = str.length - num;
+    //grab the pivot index -> the place where we'll make a split to move the characters around
+    var pivot = str.length - num;
 
-    //if the start index ends up less than zero, keep adding the string length to it until it's greater than 0
-    while (startIndex < 0){
-        startIndex += str.length;
+    //if the pivot index ends up less than zero, keep adding the string length to it until it's greater than 0
+    while (pivot < 0){
+        pivot += str.length;
     }
-    //get the back half of the characters using the start index
-    var backChars = str.slice(startIndex, str.length);
+    //get the back half of the characters using the pivot index
+    var backChars = str.slice(pivot, str.length);
 
-    //get the front half of the characters using the start index
-    var frontChars = str.slice(0, startIndex);
+    //get the front half of the characters using the pivot index
+    var frontChars = str.slice(0, pivot);
 
     //concat them to swap the positions and return
     return backChars + frontChars;
