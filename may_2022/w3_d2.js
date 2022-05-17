@@ -15,7 +15,7 @@ const encode = (str) => {
             counter++;
             i++;
         }
-        //concat the new string with str[i] with the counter
+        //concat the new string with str[i] and the counter
         newStr += str[i] + counter;
         
     }
@@ -27,7 +27,7 @@ const encode = (str) => {
 //parseInt() is ok
 //special note: can your function handle "g14f12"?
 
-//doesn't work for double digits
+/////////doesn't work for double digits
 // const decode = (str) => {
 //     var newStr = ""
 //     for (let i = 0; i < str.length; i++) {
@@ -40,6 +40,7 @@ const encode = (str) => {
 // }
 
 const decode = (str) => {
+    //create a new empty string
     var newStr = ""
     for (let i = 0; i < str.length; i++) {
         var counter = "";
