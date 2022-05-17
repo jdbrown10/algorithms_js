@@ -44,7 +44,7 @@ const decode = (str) => {
     for (let i = 0; i < str.length; i++) {
         var counter = "";
         var character = str[i];
-        while (parseInt(str[i+1])) {
+        while (parseInt(str[i+1]) || str[i+1] == 0) {
             counter += str[i+1];
             i++;
         }
@@ -57,7 +57,7 @@ const decode = (str) => {
 
 // console.log(encode("aaabbcccc")); //a3b2c4
 // console.log(decode("a3b2c4"));
-console.log(decode("g12f14"));
+console.log(decode("g12f10"));
 
 // console.log(encode("ddddeeeeeffgggg"));
 // console.log(encode("aaaaabbbbbbbc"));
