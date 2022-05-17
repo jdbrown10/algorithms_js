@@ -3,7 +3,6 @@
 //For "aaaabbcddd" return "a4b2c1d3"
 //no built in functions, parseInt() is ok
 //abba -> "a1b2a1". it's consecutive, not total.
-//if the string isn't alphabetical, should we worry about encoding/decoding alphabetically?
 
 const encode = (str) => {
     //create an empty string to return later
