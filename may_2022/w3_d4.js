@@ -21,7 +21,7 @@ const isPangram = (str) => {
 
 ////////////////////////////////////////////////////////////////////////
 
-//perfect pangram solutions:
+//perfect pangram, other students' solutions from discord:
 
 const isPerfectPangram = (str) => {
     if(!isPangram(str)){
