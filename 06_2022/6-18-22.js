@@ -3,20 +3,11 @@
 
 // A string of braces is considered valid if all braces are matched with the correct brace.
 
-var validBraces = (braces) => {
-    var bracePairs = {'(': ')', '{': '}','[': ']'};
-    var queue = [];
-
-    for(var brace of bracePairs) {
-        if(matches[brace]) {
-            queue.push(brace);
-        } else {
-            if(brace !== matches[queue.pop()]) {
-                return false;
-            }
-        }
+function validBraces(braces){
+    while(braces.indexOf("{}") != -1 || braces.indexOf("()") != -1 || braces.indexOf("[]") != -1) {
+        braces = braces.replace("{}", "").replace("()", "").replace("[]", "");
     }
-    return queue.length === 0;
+    return braces.length == 0;
 }
 
 console.log(validBraces("(){}[]")) //True
