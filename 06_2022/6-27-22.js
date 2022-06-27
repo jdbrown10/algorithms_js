@@ -61,3 +61,45 @@ console.log(MultiplesThreeAndFive(15));
 // Input: 21
 // Output: 119 (3, 5, 6, 9, 10, 12, 15, 18, 20, 21 are multiples)
 console.log(MultiplesThreeAndFive(21));
+
+//============================
+
+// DESCRIPTION:
+// Given an array of integers, return an array of all the integers that occur an odd number of times. The returned array may list the integers in any order
+
+let oddOccurrances = (arr) => {
+    let oddArr = [];
+    let savedArr = arr;
+    for (let i = 0; i < arr.length; i++) {
+        let count = 1;
+        for (let j = i+1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+                arr.splice(j, 1)
+            }
+        }
+        if (count % 2 == 1) {
+            oddArr.push(arr[i]);
+        }
+    }
+    arr = savedArr;
+    return oddArr;
+}
+
+
+// TESTS:
+
+// Example 1:
+// Input: [7] 
+// Output: 7
+console.log(oddOccurrances([7]))
+
+// Example 2:
+// Input: [1,2,2,3,4,5,5,] 
+// Output: [1,3,4]
+console.log(oddOccurrances([1,2,2,3,4,5,5,]))
+
+// Example 3:
+// Input: [1,1,2,7,8,8,8,4,11, 6, 6] 
+// Output: [2, 7, 8, 4, 11]
+console.log(oddOccurrances([1,1,2,7,8,8,8,4,11, 6, 6]))
