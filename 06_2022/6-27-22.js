@@ -5,34 +5,44 @@
 // -Assume the input will always be a positive integer.
 // -If the number is a multiple of both 3 and 5, only count it once.
 
-let MultiplesThreeAndFive = (num) => {
-    //get multiples of 3 and 5
-    //store multiples in an array
-    //add all numbers in array together
-    //return final sum
-    let arr = []
-    for (let i = 3; i<=num; i++) {
-        arr.push(i);
-        i+=2
-    }
-    for (let i = 5; i<=num; i++) {
-        arr.push(i);
-        i+=4
-    }
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i+1; j < arr.length; j++) {
-            if (arr[i] == arr[j]) {
-                arr.splice(j, 1)
-            }
+// let MultiplesThreeAndFive = (num) => {
+//     //get multiples of 3 and 5
+//     //store multiples in an array
+//     //add all numbers in array together
+//     //return final sum
+//     let arr = []
+//     for (let i = 3; i<=num; i++) {
+//         arr.push(i);
+//         i+=2
+//     }
+//     for (let i = 5; i<=num; i++) {
+//         arr.push(i);
+//         i+=4
+//     }
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i+1; j < arr.length; j++) {
+//             if (arr[i] == arr[j]) {
+//                 arr.splice(j, 1)
+//             }
 
+//         }
+//     }
+//     let sum = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i]
+//     }
+//     console.log(arr)
+//     return sum;
+// }
+
+let MultiplesThreeAndFive = (num) => {
+    let sum = 0
+    for (let i = 0; i <=num; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i
         }
     }
-    let sum = 0
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i]
-    }
-    console.log(arr)
-    return sum;
+    return sum
 }
 
 // TESTS:
