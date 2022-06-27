@@ -62,7 +62,7 @@ console.log(MultiplesThreeAndFive(15));
 // Output: 119 (3, 5, 6, 9, 10, 12, 15, 18, 20, 21 are multiples)
 console.log(MultiplesThreeAndFive(21));
 
-//============================
+//===============================================================
 
 // DESCRIPTION:
 // Given an array of integers, return an array of all the integers that occur an odd number of times. The returned array may list the integers in any order
