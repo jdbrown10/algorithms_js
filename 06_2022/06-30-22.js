@@ -3,7 +3,7 @@
 
 let camelCase = (str) => {
     //strings are immutable in js so gonna have to make a new string and concatinate
-    //whenever there's a space, set the capitalize variable to true, which will capitalize the next thing that isn't a space
+    //whenever there's a space, set the capitalize variable to true (and don't add the space to the new string). Then use that boolean to determine whether capitalize the next thing that isn't a space as it's concatinated
     let camelCased = ""
     let capitalize = false;
     for (let i = 0; i < str.length; i++) {
