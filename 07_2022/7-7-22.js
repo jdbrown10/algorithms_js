@@ -7,17 +7,18 @@ let smallestDifference = (arr1, arr2) => {
     let smallestDifference = null;
     for (let i = 0; i < arr1.length; i++) {
         for (let j = 0; j < arr2.length; j++) {
+            //this should all be condensed
             if (smallestDifference == null && arr1[i] > arr2[j]) {
-                finalValues = [arr1[i], arr2[j]]
-                smallestDifference = arr1[i] - arr2[j]
+                finalValues = [arr1[i], arr2[j]];
+                smallestDifference = arr1[i] - arr2[j];
             }
-            if (smallestDifference == null && arr1[i] > arr2[j]) {
-                finalValues = [arr1[i], arr2[j]]
-                smallestDifference = arr1[i] - arr2[j]
+            if (smallestDifference == null && arr1[i] < arr2[j]) {
+                finalValues = [arr1[i], arr2[j]];
+                smallestDifference = arr2[j] - arr1[i];
             }
             if (smallestDifference == null && arr1[i] == arr2[j]) {
-                finalValues = [arr1[i], arr2[j]]
-                smallestDifference = 100000000000000;
+                finalValues = [arr1[i], arr2[j]];
+                smallestDifference = 100000000000000; //gotta actually make an edge cast for this situation that works
             }
             if (arr1[i] >= arr2[j]) {
                 currentDifference = arr1[i] - arr2[j];
